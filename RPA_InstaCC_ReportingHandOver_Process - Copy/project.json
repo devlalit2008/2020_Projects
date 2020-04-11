@@ -3,18 +3,17 @@
   "description": "RPA: Shift handover & Morning update from 1) AIS & 2) VCS url's (3. Snow Integration Tickets-later)",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.Excel.Activities": "[2.8.1-preview]",
-    "UiPath.Java.Activities": "[1.0.7346.28183]",
-    "UiPath.Mail.Activities": "[1.8.1-preview]",
-    "UiPath.Python.Activities": "[1.1.6863.33404]",
+    "UiPath.Credentials.Activities": "[1.1.6479.13204]",
+    "UiPath.Mail.Activities": "[1.8.3-beta.865074]",
     "UiPath.System.Activities": "[20.2.0-preview]",
-    "UiPath.UIAutomation.Activities": "[20.4.0-beta.853586]"
+    "UiPath.UIAutomation.Activities": "[19.10.1]"
   },
   "webServices": [],
   "schemaVersion": "4.0",
   "studioVersion": "20.2.0.108",
-  "projectVersion": "1.0.3-alpha.3",
+  "projectVersion": "1.0.3-alpha.10",
   "runtimeOptions": {
+    "exceptionHandlerWorkflow": "GlobalHandlerShiftUpdate.xaml",
     "autoDispose": false,
     "isPausable": true,
     "requiresUserInteraction": true,
