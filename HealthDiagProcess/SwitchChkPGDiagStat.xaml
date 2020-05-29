@@ -1,0 +1,302 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="SwitchChkPGDiagStat" this:SwitchChkPGDiagStat.strDevices="PG" this:SwitchChkPGDiagStat.strURL="https://10.220.130.9:7890/icm-dp/rest/DiagnosticPortal/ListProcesses" this:SwitchChkPGDiagStat.strUname="iccghcscu1\lmahajan" this:SwitchChkPGDiagStat.strPwd="Cisco@123" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="strDevices" Type="InArgument(x:String)" />
+    <x:Property Name="strURL" Type="InArgument(x:String)" />
+    <x:Property Name="flowOutput" Type="InOutArgument(x:String)" />
+    <x:Property Name="strUname" Type="InArgument(x:String)" />
+    <x:Property Name="strPwd" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>683,3062</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="17">
+      <x:String>System.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="18">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="SwitchChkPGDiagStat" sap:VirtualizedContainerService.HintSize="693,2997" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Boolean" Name="bolImgExist" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="651,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DelayBefore="1000" DelayMS="1000" DisplayName="Send Hotkey 'iexplore.exe  BBar'" sap:VirtualizedContainerService.HintSize="651,117" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="d" KeyModifiers="Win">
+      <ui:SendHotkey.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0ffebd70-55fc-48ab-a96a-4013f1d0422c" Selector="&lt;wnd app='iexplore.exe' cls='UIMainClass' title='115.112.29.109 through Firepass' /&gt;&lt;wnd cls='UIContainerClass' /&gt;" WaitForReady="INTERACTIVE">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+        </ui:Target>
+      </ui:SendHotkey.Target>
+    </ui:SendHotkey>
+    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DelayBefore="1000" DelayMS="1000" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="651,117" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="r" KeyModifiers="Win">
+      <ui:SendHotkey.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="dea8bd3b-edfb-400d-93e6-f4b645e85de2">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:SendHotkey.Target>
+    </ui:SendHotkey>
+    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into" EmptyField="True" sap:VirtualizedContainerService.HintSize="651,96" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[&quot;chrome &quot;+strURL+&quot; --start-maximized[k(enter)]&quot;]">
+      <ui:TypeInto.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="e8cd87ab-cc0a-4c1b-afe1-14d11687e760" WaitForReady="COMPLETE">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+        </ui:Target>
+      </ui:TypeInto.Target>
+    </ui:TypeInto>
+    <ui:ImageFound DisplayName="Image Exists 'Chk Redirect Advance/Unsafe'" Found="[bolImgExist]" sap:VirtualizedContainerService.HintSize="651,106" sap2010:WorkflowViewState.IdRef="ImageFound_1">
+      <ui:ImageFound.Image>
+        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFYAAABKCAYAAAAhQqMXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPcSURBVHhe7du9axRRFAVw/x3LdAo2BiwULBQstBOxsBQrsRVLK7GQVIKNoF3SxUZII6QJpFwLiy0sppzCYpwzyctuXu7dfR/3vncH3oEDYT+GnR/L7pDDXhtaVNJgldJgldJgldJgldJgldJglTI72P7X0VTrmR3s8unDqdYzK9ju65dhcWdnKv62nPnAdt2wuL97AYu/cZvVzAa2e/92hXpe3GY184D9vRghb16BxW24z2JmAbt8+YxAPSvusxjzsP2PQxJ0vXiMtdiG/Te+Wx/fIzHXi8fgsZZiGrb7vEdCUsVjLcUu7N/x8uou9YXFdHwsnmMlZmG7d29owA3Fc6zEJGx/ckrChRTPtRCTsMsXT0i0kOK5FmIOtj/4RoLFFMeoHVuwfT8sHm2/vNra8Rg4Vs2Ygu0+fqChEopj1Ywd2D/LuMurbcXl13jMWjEDu3z9igbKKI5ZKyZgMbVQMBKtNeOYgMXUQqFItNaMUx12fW7Rao0Zpy6sP7dotcKMUxWWmlu0WnrGqQfLzi10uRzfoh9/tWVnnGqwm+YWqlwOb1wPxi0541SBDZlb/HIB7IR7m36e31IzTnnYwLnFL5cz2J3haHzXhuCWmnGKw8bMLevlAligup4G4JaYccrCxs4ta+VydP5ujcItMOMUhU2ZW1y5+Kj4IkO34WrPOMVgc+YWlAsHG4KrOeMUg82ZW1AuHOrUEXYTruaMUwS2P9gnTyymXLahulLHRPHaNKIPKzS3cAmG5XCVZhx12O6TzNzCJQR1Gy5eo3R0YQXnFoBN16zE5ZWPysGiJK7CjKMKKz23AG4jKupBUqVwpWccNVituQVwLOx4XwgsSuFKzjhqsJpzi8NNRXX1cSVnHBXY7rv+3AKYXFjUx8Vrl4g8bKm5ZSxgclBdL+EKzTjisFpzC5fpI8GDSuk6rsSMIwsbObfElIv7tyGFFdsVbv6MIwobO7fElIu7tsVHAoUVW4ebO+OIwfY/4+eWmHJx64G7SqCwYutwcU6pkYFNnFtiysWhOliJz1sUuDkzjghs6twSUy5XYMdSUCkFbuqMkw+bMbfEFHD703C4KoUq+a5FU2ecbNicuSW2QLtA9T5bNVBdlwkzThZs7tyS0jPcFaoPS8FItD85Pj/rsGTB5s4tqQVgqXer6+J53IyTDCsxt+QUiJdgPQiNdhG/xkmDlfp1S2ZxsiVhFw92p3MPSRKs1NwiUZxwCVTX0F/jxMNK/7pFoBSAWvF/hIAZJxpW49ctEiURlBoy4yR/ebVsToNVSoNVSoNVSoNVSoNVSoNVSoNVSoNVSoNVyTD8B5xDbyMxLleNAAAAAElFTkSuQmCC" />
+      </ui:ImageFound.Image>
+      <ui:ImageFound.Target>
+        <ui:Target Element="{x:Null}" Id="255dfa0b-6bc6-486a-85d2-701f323754a7" Selector="&lt;wnd app='iexplore.exe' cls='UIMainClass' title='115.112.29.109 through Firepass' /&gt;&lt;wnd cls='UIContainerClass' /&gt;" TimeoutMS="35000" WaitForReady="NONE">
+          <ui:Target.ClippingRegion>
+            <ui:Region Rectangle="197, 137, 878, 558" />
+          </ui:Target.ClippingRegion>
+        </ui:Target>
+      </ui:ImageFound.Target>
+    </ui:ImageFound>
+    <If Condition="[bolImgExist]" sap:VirtualizedContainerService.HintSize="651,596" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="376,446" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="PG Advance OR Back Safely is appeared!" />
+          <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'iexplore.exe 115.112.29...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+            <ui:ClickImage.CursorPosition>
+              <ui:CursorPosition Position="Center">
+                <ui:CursorPosition.OffsetX>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetX>
+                <ui:CursorPosition.OffsetY>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetY>
+              </ui:CursorPosition>
+            </ui:ClickImage.CursorPosition>
+            <ui:ClickImage.Image>
+              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF0AAAAkCAYAAADrXDbKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGVSURBVGhD7ZoxTgMxEEU5Jx01V6JCogxd6LgCdFwj5ZZGf8WHYXbsrDfrTIr/JCvr+WPLedqk8l0RV+dX+jRN5ePzqxxej+Xp+UVjpwGf8Aq/ZJaOwvHtfQ5Pp79QXA58wiv8UvwsHUUMMQ7reJaOn4De8LHALzyDWTr+e8R46FnSr4ikJyDpCUh6ApKegKQnIOkJSHoCNyP9/uHx5+l22euMQ6XjkGsPKuk7Iekxw6TzgDXxrNs++2mxNa7xfZxHGWFm86hGfBb1bGG4dOAPa78IiObEPnvW7gGifVproszOLyFNuqfWH/WSVt+aPXrX1PbpZYj0cwfuyX0v5naQqI/4jHAPO4h9JlFtC8OkR4PYZ+Jrfg1ozXsyUquDKGv195D2prfmoFaz2Pm5zOegVgc+a/X2srv01sGiL8GaX2czC+s+973R3A5SqwNf9/lWhrzpoo2kJyDpCUh6ApKegKQnIOkJSHoC/6TrLuN4FncZdWt3PItbu7qfPg74hNfF/XSAAkL8BPDfo7HPgE94pfBSSvkGnrf9XVwV+a8AAAAASUVORK5CYII=" />
+            </ui:ClickImage.Image>
+            <ui:ClickImage.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c449e4a6-2b62-42d9-b7d1-af665e8f982b" Selector="&lt;wnd app='iexplore.exe' cls='UIMainClass' title='115.112.29.109 through Firepass' /&gt;">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:ClickImage.Target>
+          </ui:ClickImage>
+          <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'iexplore.exe 115.112.29...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ClickImage_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+            <ui:ClickImage.CursorPosition>
+              <ui:CursorPosition Position="Center">
+                <ui:CursorPosition.OffsetX>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetX>
+                <ui:CursorPosition.OffsetY>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetY>
+              </ui:CursorPosition>
+            </ui:ClickImage.CursorPosition>
+            <ui:ClickImage.Image>
+              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAADEAAAARCAYAAAB0MEQqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADASURBVEhL7ZHhCoQwDIN9XfH9f09yEAixnSueuJP7YLg2aTW4tBfwDzEL04XY1u1zKqQhqou+weg73ReGeCIAqLxXvachfHGk4ek+wL5rUV97WV/R+hCiZwZa4+418bmM3gzqMx1cDqH0tIzRfSCrbwsBUHsPsO+6e90X6eDWEGR0ZnQfoV4KgbvXitdkdCbSvKdQC0P0lqkW+Qhn3ANUU73qZX0IAdQ8K/qNCxPxEN5df/rwmwju4Z/4NV4QorUdaYrg4tJXquMAAAAASUVORK5CYII=" />
+            </ui:ClickImage.Image>
+            <ui:ClickImage.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4ee7d0e5-f236-42fd-8d2c-6aebdac3b187" Selector="&lt;wnd app='iexplore.exe' cls='UIMainClass' title='115.112.29.109 through Firepass' /&gt;">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:ClickImage.Target>
+          </ui:ClickImage>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230,62" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="PG Advance OR Back Safely doesn't appeared!" />
+      </If.Else>
+    </If>
+    <ui:OnImageAppear FoundElement="{x:Null}" ContinueOnError="True" DisplayName="On Image Appear 'Auth Pop-Up Appear'" sap:VirtualizedContainerService.HintSize="651,784" sap2010:WorkflowViewState.IdRef="OnImageAppear_1" RepeatForever="False">
+      <ui:OnImageAppear.Body>
+        <Sequence sap:VirtualizedContainerService.HintSize="418,638" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'UIContainerClass'" EmptyField="True" sap:VirtualizedContainerService.HintSize="376,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[strUname+ &quot;[k(tab)]&quot;]">
+            <ui:TypeInto.Target>
+              <ui:Target Element="{x:Null}" Id="840c90c9-a0d5-4382-a569-36ed177a5154" InformativeScreenshot="5090bac104b994138dfb8fa7e063407c" Selector="&lt;wnd app='iexplore.exe' cls='UIMainClass' title='115.112.29.109 through Firepass' /&gt;&lt;wnd cls='UIContainerClass' /&gt;">
+                <ui:Target.ClippingRegion>
+                  <ui:Region Rectangle="468, 139, 259, 39" />
+                </ui:Target.ClippingRegion>
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:TypeInto.Target>
+          </ui:TypeInto>
+          <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'UIContainerClass'" EmptyField="True" sap:VirtualizedContainerService.HintSize="376,134" sap2010:WorkflowViewState.IdRef="TypeInto_3" Text="[strPwd]">
+            <ui:TypeInto.Target>
+              <ui:Target Element="{x:Null}" Id="c4ce9e05-97ac-45a5-9918-3785486cffc3" InformativeScreenshot="c0dabc0634f8612556227c36dd7a3b2e" Selector="&lt;wnd app='iexplore.exe' cls='UIMainClass' title='115.112.29.109 through Firepass' /&gt;&lt;wnd cls='UIContainerClass' /&gt;">
+                <ui:Target.ClippingRegion>
+                  <ui:Region Rectangle="472, 187, 199, 31" />
+                </ui:Target.ClippingRegion>
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:TypeInto.Target>
+          </ui:TypeInto>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:Click DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DelayMS="2000" DisplayName="Click 'UIContainerClass'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target Element="{x:Null}" Id="231db947-a91b-4a13-90d9-83363b2b4f9e" InformativeScreenshot="5a5a905af0dd8aa374ce672a421c3b42" Selector="&lt;wnd app='iexplore.exe' cls='UIMainClass' title='115.112.29.109 through Firepass' /&gt;&#xA;&lt;wnd cls='UIContainerClass' /&gt;&#xA;" WaitForReady="COMPLETE">
+                  <ui:Target.ClippingRegion>
+                    <ui:Region Rectangle="757, 249, 57, 21" />
+                  </ui:Target.ClippingRegion>
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+          </Sequence>
+        </Sequence>
+      </ui:OnImageAppear.Body>
+      <ui:OnImageAppear.Image>
+        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAI4AAAAlCAYAAACUJtElAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJISURBVHhe7Zw9TsNAEIU5GyVXSRlxBUqOQMERkNIghZIjhCJSLkHhcuFlGWkY73r8s44T7/ukJ+Px2mjWX9aVfRcIGQHFIaNIivN5DGHz2oSH5ybcP6076BG9oue+NE0TTsdT2H/sw+5tt+qgR/SKnjUtcTCBqQmuIX3kwQTu3/fh8HUIzff/yVwj6BG9omctT0uczUt6UmsIevfArw8TWRu275Y4NTyeckHvHli6a1hpLOgZvQstcVITWlM88NyvFd07xTHxoDgRimPiQXEiFMfEg+JEKI6JB8WJUBwTD4oToTgmHhQnQnFMPG5VnO3j9u+v8cwujkVqdtzQlLiGF49S4uBG6szN1YtT4hpLxqOEOJcQxXKz4ui6JVezkbrFjpsSj6nieDcQxyWCruk6SNVztanMKg6i0TW97VtP1WRr6yXiMbc4Ghlrz8nVwZCxQ5ldHB25pt3mjtt6qiZbWy8Rj0uuODLWnpOrAzlPR+pToTgd8ZhTHHssd9NzdZCqgVx9CBSnIx5TxQF9b67s962DIWOHMqs4Fl3vGiNbPUbv65psbb1EPEqIA3AjdYRUXR8Het+OBbnaVC664nhZ4n92xaOUOLfI4uJoUseXjAfFiSy+4lxbPChOhOKYeFCcCMUx8aA4EYpj4kFxIhTHxIPiRCiOiQfFibTE4Qt53fCFvEhLHL4C3A1fAY60xOFHB7qRjw6cv+BQwcqDHtGr+9EBgAnkZ07yYALPk/m7dOO5v+agx/OPREkDkuIQ4kFxyCgoDhlBCD+XLSosGgsVNgAAAABJRU5ErkJggg==" />
+      </ui:OnImageAppear.Image>
+      <ui:OnImageAppear.Target>
+        <ui:Target Element="{x:Null}" Id="c1688d99-aac0-4e9a-94c6-1694bc7c6f8a" Selector="&lt;wnd app='iexplore.exe' cls='UIMainClass' title='115.112.29.109 through Firepass' /&gt;&lt;wnd cls='UIContainerClass' /&gt;" TimeoutMS="30000" WaitForReady="NONE">
+          <ui:Target.ClippingRegion>
+            <ui:Region Rectangle="311, 26, 786, 504" />
+          </ui:Target.ClippingRegion>
+        </ui:Target>
+      </ui:OnImageAppear.Target>
+    </ui:OnImageAppear>
+    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DelayBefore="2000" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="651,117" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="a" KeyModifiers="Ctrl">
+      <ui:SendHotkey.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="8436c1d5-525c-40f8-9c93-692b635d9855">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:SendHotkey.Target>
+    </ui:SendHotkey>
+    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="651,117" sap2010:WorkflowViewState.IdRef="SendHotkey_4" Key="c" KeyModifiers="Ctrl">
+      <ui:SendHotkey.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="8436c1d5-525c-40f8-9c93-692b635d9855">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:SendHotkey.Target>
+    </ui:SendHotkey>
+    <ui:GetFromClipboard DisplayName="Get From Clipboard" sap:VirtualizedContainerService.HintSize="651,22" sap2010:WorkflowViewState.IdRef="GetFromClipboard_1" TimeoutMS="5000">
+      <ui:GetFromClipboard.Result>
+        <OutArgument x:TypeArguments="x:String">[flowOutput]</OutArgument>
+      </ui:GetFromClipboard.Result>
+    </ui:GetFromClipboard>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="651,93" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[Environment.NewLine+&quot;The &quot;+strDevices+&quot; Response For Host-&quot;+strURL+&quot; : &quot;+Environment.NewLine+flowOutput]" />
+    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="651,117" sap2010:WorkflowViewState.IdRef="SendHotkey_5" Key="f4" KeyModifiers="Alt" SpecialKey="True">
+      <ui:SendHotkey.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="1f952fdc-06c3-4199-a6c1-4a519acc5ce5">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:SendHotkey.Target>
+    </ui:SendHotkey>
+    <ui:SetToClipboard DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="651,59" sap2010:WorkflowViewState.IdRef="SetToClipboard_1">
+      <ui:SetToClipboard.Text>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </ui:SetToClipboard.Text>
+    </ui:SetToClipboard>
+    <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="651,22" sap2010:WorkflowViewState.IdRef="Delay_2" />
+  </Sequence>
+</Activity>

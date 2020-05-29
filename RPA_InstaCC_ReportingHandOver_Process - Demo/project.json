@@ -1,5 +1,5 @@
 {
-  "name": "RPA_InstaCC_ReportingHandOver_Process-Copy",
+  "name": "RPA_InstaCC_ReportingHandOver_Process-Demo",
   "description": "RPA: Shift handover & Morning update from 1) AIS & 2) VCS url's (3. Snow Integration Tickets-later)",
   "main": "1.Main.xaml",
   "dependencies": {
@@ -12,7 +12,7 @@
   "webServices": [],
   "schemaVersion": "4.0",
   "studioVersion": "20.2.0.108",
-  "projectVersion": "1.0.3-DemoDeployed.23042026",
+  "projectVersion": "1.0.3-DemoDeployed.23042022",
   "runtimeOptions": {
     "exceptionHandlerWorkflow": "GlobalHandlerShiftUpdate.xaml",
     "autoDispose": false,
