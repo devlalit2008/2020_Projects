@@ -3,7 +3,7 @@
     <x:Property Name="CPUpath" Type="InArgument(x:String)" />
     <x:Property Name="scrShotCPU" Type="InOutArgument(ui:Image)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>671,10143</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>606,10158</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -52,13 +52,13 @@
       <AssemblyReference>UiPath.Database</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open 'Orian' Browser" sap:VirtualizedContainerService.HintSize="514,10078" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Url="http://115.110.132.61/Orion/SummaryView.aspx?ViewID=1">
+  <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open 'Orian' Browser" sap:VirtualizedContainerService.HintSize="514,10093" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Url="http://115.110.132.61/Orion/SummaryView.aspx?ViewID=1">
     <ui:OpenBrowser.Body>
       <ActivityAction x:TypeArguments="x:Object">
         <ActivityAction.Argument>
           <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
         </ActivityAction.Argument>
-        <Sequence DisplayName="Do CPU Attach" sap:VirtualizedContainerService.HintSize="480,9979" sap2010:WorkflowViewState.IdRef="Sequence_23">
+        <Sequence DisplayName="Do CPU Attach" sap:VirtualizedContainerService.HintSize="480,9994" sap2010:WorkflowViewState.IdRef="Sequence_23">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Default="C:\Users\lmahajan\Desktop\VCSscrShotCPU.jpg" Name="CPUpath" />
             <Variable x:TypeArguments="ui:Image" Name="scrShotCPU" />
@@ -70,8 +70,8 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message - Opening Orian URL and ScrShot" sap:VirtualizedContainerService.HintSize="438,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Orian Browser Opening - Now attaching CPU/MEM image&quot;]" />
-          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,808" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+          <ui:LogMessage DisplayName="Log Message - Opening Orian URL and ScrShot" sap:VirtualizedContainerService.HintSize="438,93" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Orian Browser Opening - Now attaching CPU/MEM image&quot;]" />
+          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,812" sap2010:WorkflowViewState.IdRef="TryCatch_1">
             <TryCatch.Try>
               <Sequence sap:VirtualizedContainerService.HintSize="376,580" sap2010:WorkflowViewState.IdRef="Sequence_25">
                 <sap:WorkflowViewStateService.ViewState>
@@ -140,7 +140,7 @@
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                   </ActivityAction.Argument>
-                  <Sequence sap:VirtualizedContainerService.HintSize="376,68" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                  <Sequence sap:VirtualizedContainerService.HintSize="376,66" sap2010:WorkflowViewState.IdRef="Sequence_26">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -583,7 +583,7 @@
               </ui:Target>
             </ui:Click.Target>
           </ui:Click>
-          <Sequence DisplayName="Sequence VCS data pasting" sap:VirtualizedContainerService.HintSize="438,1160" sap2010:WorkflowViewState.IdRef="Sequence_28">
+          <Sequence DisplayName="Sequence VCS data pasting" sap:VirtualizedContainerService.HintSize="438,1162" sap2010:WorkflowViewState.IdRef="Sequence_28">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -608,7 +608,7 @@
                 </ui:Target>
               </ui:Click.Target>
             </ui:Click>
-            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'item  &quot;A&quot; 1'" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="SendHotkey_16" Key="end" KeyModifiers="Ctrl, Shift" SpecialKey="True">
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'item  &quot;A&quot; 1'" sap:VirtualizedContainerService.HintSize="334,155" sap2010:WorkflowViewState.IdRef="SendHotkey_16" Key="end" KeyModifiers="Ctrl, Shift" SpecialKey="True">
               <ui:SendHotkey.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="2c70d7bb19dbff9070d9a79205b75716" Selector="&lt;wnd app='excel.exe' cls='XLMAIN' title='out.xlsm - Excel' /&gt;&lt;uia automationid='Grid' name='Grid' role='data grid' /&gt;&lt;uia name='&amp;quot;A&amp;quot; 1' role='item' tableCol='1' tableRow='1' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -676,7 +676,7 @@
                 </ui:CursorPosition>
               </ui:Click.CursorPosition>
               <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="7518728558ea745746ec1e86ac009f81" Selector="&lt;wnd app='outlook.exe' cls='rctrl_renwnd32' title='RPA: Shift handover &amp;amp; Morning update - With imp screenshots atta*' /&gt;&#xD;&#xA;&lt;uia cls='MsoCommandBar' /&gt;&#xD;&#xA;&lt;uia cls='NetUIOrderedGroup' name='Message' /&gt;&#xD;&#xA;&lt;uia cls='NetUIChunk' name='Clipboard' /&gt;&#xD;&#xA;&lt;uia cls='NetUIRibbonButton' name='Paste' /&gt;&#xD;&#xA;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="7518728558ea745746ec1e86ac009f81" Selector="&lt;wnd app='outlook.exe' cls='rctrl_renwnd32' title='RPA: Shift handover &amp;amp; Morning update - With imp screenshots atta*' /&gt;&#xA;&lt;uia cls='MsoCommandBar' /&gt;&#xA;&lt;uia cls='NetUIOrderedGroup' name='Message' /&gt;&#xA;&lt;uia cls='NetUIChunk' name='Clipboard' /&gt;&#xA;&lt;uia cls='NetUIRibbonButton' name='Paste' /&gt;&#xA;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -686,7 +686,7 @@
                 </ui:Target>
               </ui:Click.Target>
             </ui:Click>
-            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="334,116" sap2010:WorkflowViewState.IdRef="SendHotkey_17" Key="enter" KeyModifiers="None" SpecialKey="True">
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="334,117" sap2010:WorkflowViewState.IdRef="SendHotkey_17" Key="enter" KeyModifiers="None" SpecialKey="True">
               <ui:SendHotkey.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}">
                   <ui:Target.TimeoutMS>
@@ -698,9 +698,9 @@
                 </ui:Target>
               </ui:SendHotkey.Target>
             </ui:SendHotkey>
-            <ui:TypeInto ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'edit  Page 1 content'" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_11" Text="PFA *imp critical XX-CPU &amp; MEM nodes running:[k(enter)][k(enter)]">
+            <ui:TypeInto ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'edit  Page 1 content'" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_11" Text="4] PFA *imp critical XX-CPU &amp; MEM nodes running:[k(enter)][k(enter)]">
               <ui:TypeInto.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="a4a99be0a9c423dfc23f467737299e35" Selector="&lt;wnd app='outlook.exe' cls='rctrl_renwnd32' title='RPA: Shift handover &amp;amp; Morning update - With imp screenshots atta*' /&gt;&#xD;&#xA;&lt;wnd cls='_WwG' title='Message' /&gt;&#xD;&#xA;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="a4a99be0a9c423dfc23f467737299e35" Selector="&lt;wnd app='outlook.exe' cls='rctrl_renwnd32' title='RPA: Shift handover &amp;amp; Morning update - With imp screenshots atta*' /&gt;&#xA;&lt;wnd cls='_WwG' title='Message' /&gt;&#xA;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -774,7 +774,7 @@
               </ui:Target>
             </ui:Click.Target>
           </ui:Click>
-          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="438,116" sap2010:WorkflowViewState.IdRef="SendHotkey_9" Key="f" KeyModifiers="Ctrl">
+          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="438,117" sap2010:WorkflowViewState.IdRef="SendHotkey_9" Key="f" KeyModifiers="Ctrl">
             <ui:SendHotkey.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}">
                 <ui:Target.TimeoutMS>
@@ -838,7 +838,7 @@
           <ui:SaveImage DisplayName="Save Image" FileName="C:\Users\lmahajan\Desktop\VCSscrShotCPU.jpg" sap:VirtualizedContainerService.HintSize="438,92" sap2010:WorkflowViewState.IdRef="SaveImage_3" Image="[scrShotCPU]" />
           <ui:TypeInto ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into '_WwG'" sap:VirtualizedContainerService.HintSize="438,134" sap2010:WorkflowViewState.IdRef="TypeInto_7" Text="VCSscrShotCPU.jpg Attaching For CPU LOAD - :[k(enter)]">
             <ui:TypeInto.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="dbf0cf80def175054b8c3f061a830940" Selector="&lt;wnd app='outlook.exe' cls='rctrl_renwnd32' title='RPA: Shift handover &amp;amp; Morning update - With imp screenshots atta*' /&gt;&#xD;&#xA;&lt;wnd cls='_WwG' title='Message' /&gt;&#xD;&#xA;">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="dbf0cf80def175054b8c3f061a830940" Selector="&lt;wnd app='outlook.exe' cls='rctrl_renwnd32' title='RPA: Shift handover &amp;amp; Morning update - With imp screenshots atta*' /&gt;&#xA;&lt;wnd cls='_WwG' title='Message' /&gt;&#xA;">
                 <ui:Target.TimeoutMS>
                   <InArgument x:TypeArguments="x:Int32" />
                 </ui:Target.TimeoutMS>
@@ -860,7 +860,7 @@
               </ui:CursorPosition>
             </ui:Click.CursorPosition>
             <ui:Click.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="5049d34aa3f71c6579806d3d10911b67" Selector="&lt;wnd app='outlook.exe' cls='rctrl_renwnd32' title='RPA: Shift handover &amp;amp; Morning update - With imp screenshots atta*' /&gt;&#xD;&#xA;&lt;uia cls='MsoCommandBar' /&gt;&#xD;&#xA;&lt;uia cls='NetUIPanViewer' name='Ribbon Tabs' /&gt;&#xD;&#xA;&lt;uia cls='NetUIRibbonTab' name='Insert' /&gt;&#xD;&#xA;">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="5049d34aa3f71c6579806d3d10911b67" Selector="&lt;wnd app='outlook.exe' cls='rctrl_renwnd32' title='RPA: Shift handover &amp;amp; Morning update - With imp screenshots atta*' /&gt;&#xA;&lt;uia cls='MsoCommandBar' /&gt;&#xA;&lt;uia cls='NetUIPanViewer' name='Ribbon Tabs' /&gt;&#xA;&lt;uia cls='NetUIRibbonTab' name='Insert' /&gt;&#xA;">
                 <ui:Target.TimeoutMS>
                   <InArgument x:TypeArguments="x:Int32" />
                 </ui:Target.TimeoutMS>
@@ -882,7 +882,7 @@
               </ui:CursorPosition>
             </ui:Click.CursorPosition>
             <ui:Click.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="e1ccb861c8d6ba4ac7dbb47d1a86eab6" Selector="&lt;wnd app='outlook.exe' cls='rctrl_renwnd32' title='RPA: Shift handover &amp;amp; Morning update - With imp screenshots atta*' /&gt;&#xD;&#xA;&lt;uia cls='MsoCommandBar' /&gt;&#xD;&#xA;&lt;uia cls='NetUIOrderedGroup' name='Insert' /&gt;&#xD;&#xA;&lt;uia cls='NetUIChunk' name='Include' /&gt;&#xD;&#xA;&lt;uia cls='NetUIAnchor' name='Attach File...' /&gt;&#xD;&#xA;">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="e1ccb861c8d6ba4ac7dbb47d1a86eab6" Selector="&lt;wnd app='outlook.exe' cls='rctrl_renwnd32' title='RPA: Shift handover &amp;amp; Morning update - With imp screenshots atta*' /&gt;&#xA;&lt;uia cls='MsoCommandBar' /&gt;&#xA;&lt;uia cls='NetUIOrderedGroup' name='Insert' /&gt;&#xA;&lt;uia cls='NetUIChunk' name='Include' /&gt;&#xA;&lt;uia cls='NetUIAnchor' name='Attach File...' /&gt;&#xA;">
                 <ui:Target.TimeoutMS>
                   <InArgument x:TypeArguments="x:Int32" />
                 </ui:Target.TimeoutMS>
@@ -926,7 +926,7 @@
               </ui:Target>
             </ui:TypeInto.Target>
           </ui:TypeInto>
-          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="438,116" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SpecialKey="True">
+          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="438,117" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SpecialKey="True">
             <ui:SendHotkey.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}">
                 <ui:Target.TimeoutMS>
@@ -938,7 +938,7 @@
               </ui:Target>
             </ui:SendHotkey.Target>
           </ui:SendHotkey>
-          <Sequence DisplayName="Do MEM Attach" sap:VirtualizedContainerService.HintSize="438,2561" sap2010:WorkflowViewState.IdRef="Sequence_24">
+          <Sequence DisplayName="Do MEM Attach" sap:VirtualizedContainerService.HintSize="438,2566" sap2010:WorkflowViewState.IdRef="Sequence_24">
             <Sequence.Variables>
               <Variable x:TypeArguments="ui:Image" Name="scrShotMEM" />
               <Variable x:TypeArguments="x:String" Default="C:\Users\lmahajan\Desktop\VCSscrShotMEM.jpg" Name="MEMpath" />
@@ -949,7 +949,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="Browser  Opened - Now attaching MEM image" />
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="Browser  Opened - Now attaching MEM image" />
             <ui:Click DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="2000" DisplayName="Click 'push button'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
@@ -972,7 +972,7 @@
                 </ui:Target>
               </ui:Click.Target>
             </ui:Click>
-            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayBefore="1000" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="334,116" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="num1" KeyModifiers="Ctrl" SpecialKey="True">
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayBefore="1000" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="334,117" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="num1" KeyModifiers="Ctrl" SpecialKey="True">
               <ui:SendHotkey.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}">
                   <ui:Target.TimeoutMS>
@@ -984,7 +984,7 @@
                 </ui:Target>
               </ui:SendHotkey.Target>
             </ui:SendHotkey>
-            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="334,116" sap2010:WorkflowViewState.IdRef="SendHotkey_10" Key="f" KeyModifiers="Ctrl">
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="334,117" sap2010:WorkflowViewState.IdRef="SendHotkey_10" Key="f" KeyModifiers="Ctrl">
               <ui:SendHotkey.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}">
                   <ui:Target.TimeoutMS>
@@ -1068,7 +1068,7 @@
                 </ui:Target>
               </ui:Click.Target>
             </ui:Click>
-            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="334,116" sap2010:WorkflowViewState.IdRef="SendHotkey_5" Key="num1" KeyModifiers="Ctrl" SpecialKey="True">
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="334,117" sap2010:WorkflowViewState.IdRef="SendHotkey_5" Key="num1" KeyModifiers="Ctrl" SpecialKey="True">
               <ui:SendHotkey.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}">
                   <ui:Target.TimeoutMS>
@@ -1107,7 +1107,7 @@
             </ui:ClickImage>
             <ui:TypeInto ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'edit  Page 1 content'" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_5" Text="VCSscrShotMEM.jpg Attaching For MEMORY LOAD - :[k(enter)]">
               <ui:TypeInto.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="1bf5041847600ff1132470fd394a8342" Selector="&lt;wnd app='outlook.exe' cls='rctrl_renwnd32' title='RPA: Shift handover &amp;amp; Morning update - With imp screenshots atta*' /&gt;&#xD;&#xA;&lt;wnd cls='_WwG' title='Message' /&gt;&#xD;&#xA;" WaitForReady="COMPLETE">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="1bf5041847600ff1132470fd394a8342" Selector="&lt;wnd app='outlook.exe' cls='rctrl_renwnd32' title='RPA: Shift handover &amp;amp; Morning update - With imp screenshots atta*' /&gt;&#xA;&lt;wnd cls='_WwG' title='Message' /&gt;&#xA;" WaitForReady="COMPLETE">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -1126,7 +1126,7 @@
                 </ui:CursorPosition>
               </ui:Click.CursorPosition>
               <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="5049d34aa3f71c6579806d3d10911b67" Selector="&lt;wnd app='outlook.exe' cls='rctrl_renwnd32' title='RPA: Shift handover &amp;amp; Morning update - With imp screenshots atta*' /&gt;&#xD;&#xA;&lt;uia cls='MsoCommandBar' /&gt;&#xD;&#xA;&lt;uia cls='NetUIPanViewer' name='Ribbon Tabs' /&gt;&#xD;&#xA;&lt;uia cls='NetUIRibbonTab' name='Insert' /&gt;&#xD;&#xA;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="5049d34aa3f71c6579806d3d10911b67" Selector="&lt;wnd app='outlook.exe' cls='rctrl_renwnd32' title='RPA: Shift handover &amp;amp; Morning update - With imp screenshots atta*' /&gt;&#xA;&lt;uia cls='MsoCommandBar' /&gt;&#xA;&lt;uia cls='NetUIPanViewer' name='Ribbon Tabs' /&gt;&#xA;&lt;uia cls='NetUIRibbonTab' name='Insert' /&gt;&#xA;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -1148,7 +1148,7 @@
                 </ui:CursorPosition>
               </ui:Click.CursorPosition>
               <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="e1ccb861c8d6ba4ac7dbb47d1a86eab6" Selector="&lt;wnd app='outlook.exe' cls='rctrl_renwnd32' title='RPA: Shift handover &amp;amp; Morning update - With imp screenshots atta*' /&gt;&#xD;&#xA;&lt;uia cls='MsoCommandBar' /&gt;&#xD;&#xA;&lt;uia cls='NetUIOrderedGroup' name='Insert' /&gt;&#xD;&#xA;&lt;uia cls='NetUIChunk' name='Include' /&gt;&#xD;&#xA;&lt;uia cls='NetUIAnchor' name='Attach File...' /&gt;&#xD;&#xA;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="e1ccb861c8d6ba4ac7dbb47d1a86eab6" Selector="&lt;wnd app='outlook.exe' cls='rctrl_renwnd32' title='RPA: Shift handover &amp;amp; Morning update - With imp screenshots atta*' /&gt;&#xA;&lt;uia cls='MsoCommandBar' /&gt;&#xA;&lt;uia cls='NetUIOrderedGroup' name='Insert' /&gt;&#xA;&lt;uia cls='NetUIChunk' name='Include' /&gt;&#xA;&lt;uia cls='NetUIAnchor' name='Attach File...' /&gt;&#xA;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -1192,7 +1192,7 @@
                 </ui:Target>
               </ui:TypeInto.Target>
             </ui:TypeInto>
-            <ui:SendHotkey DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayBefore="1000" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="334,116" sap2010:WorkflowViewState.IdRef="SendHotkey_4" Key="enter" KeyModifiers="None" SpecialKey="True">
+            <ui:SendHotkey DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayBefore="1000" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="334,117" sap2010:WorkflowViewState.IdRef="SendHotkey_4" Key="enter" KeyModifiers="None" SpecialKey="True">
               <ui:SendHotkey.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}">
                   <ui:Target.TimeoutMS>
