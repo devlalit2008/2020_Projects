@@ -1,0 +1,152 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="606,810" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ubac="clr-namespace:UiPath.BAF.Activities.ContextModel;assembly=UiPath.ServiceNow.Activities" xmlns:ubmcao="clr-namespace:UiPath.BAF.Models.Connection.Authentication.OAuth;assembly=UiPath.ServiceNow" xmlns:ubme="clr-namespace:UiPath.BAF.Models.Entity;assembly=UiPath.ServiceNow" xmlns:ubmr="clr-namespace:UiPath.BAF.Models.Response;assembly=UiPath.ServiceNow" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:usa="clr-namespace:UiPath.ServiceNow.Activities;assembly=UiPath.ServiceNow.Activities" xmlns:usm="clr-namespace:UiPath.ServiceNow.Models;assembly=UiPath.ServiceNow" xmlns:uss="clr-namespace:UiPath.ServiceNow.ServiceFactory;assembly=UiPath.ServiceNow" xmlns:uss1="clr-namespace:UiPath.ServiceNow.Service;assembly=UiPath.ServiceNow" xmlns:uss2="clr-namespace:UiPath.ServiceNow.Services;assembly=UiPath.ServiceNow" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="26">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.BAF.Models.Connection</x:String>
+      <x:String>UiPath.ServiceNow.Models</x:String>
+      <x:String>UiPath.BAF.Models.Response</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="21">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.ServiceNow</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="ServiceNowScope" sap:VirtualizedContainerService.HintSize="476,745" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="ss:SecureString" Name="password" />
+      <Variable x:TypeArguments="x:String" Name="username" />
+      <Variable x:TypeArguments="ss:SecureString" Name="clientSecret" />
+      <Variable x:TypeArguments="x:String" Name="clientId" />
+      <Variable x:TypeArguments="x:String" Default="https://dev98331.service-now.com/" Name="endpointURL" />
+      <Variable x:TypeArguments="usm:ServiceNowConnection" Name="serviceNowConnection" />
+      <Variable x:TypeArguments="ubmr:ResponseStatus" Name="ResponseStatus" />
+      <Variable x:TypeArguments="x:String" Name="TicketKeyword">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">MRTG</Literal>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="resultsOutput" />
+      <Variable x:TypeArguments="ubmr:ResponseStatus" Name="getRecordsResponse" />
+      <Variable x:TypeArguments="sd:DataTable" Name="getRecordsResult" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="ServiceNocSignIn" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[password]" Username="[username]" />
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="ServiceNowClients" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[clientSecret]" Username="[clientId]" />
+    <usa:ServiceNowScopeActivity ExistingConnection="{x:Null}" ClientId="[clientId]" ClientSecret="[clientSecret]" DisplayName="ServiceNow Application Scope" EndpointUrl="[endpointURL]" sap:VirtualizedContainerService.HintSize="434,529" sap2010:WorkflowViewState.IdRef="ServiceNowScopeActivity_1" Password="[password]" ServiceNowConnection="[serviceNowConnection]" TelemetryEnabled="False" ThrowExceptionOnError="False" Username="[username]">
+      <usa:ServiceNowScopeActivity.Body>
+        <ActivityAction x:TypeArguments="ubac:ScopeActivityContext">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ubac:ScopeActivityContext" Name="ScopeActivityContext" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,418" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <usa:GetRecords BusinessEntityName="{x:Null}" DisplayName="Search ServiceNow Records" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRecords_1" Query="[&quot;sysparm_query=short_descriptionLIKE&quot;+TicketKeyword+&quot;&amp;sysparm_fields=number,short_description,sys_created_by,sys_created_on&quot;]" Result="[getRecordsResult]" Status="[getRecordsResponse]" TestQuery="sysparm_query=short_descriptionLIKEMRTG&amp;sysparm_fields=number,short_description,sys_created_by,sys_created_on">
+              <usa:GetRecords.BusinessEntity>
+                <ubme:BusinessEntity AllFields="{x:Null}" Id="{x:Null}" Metadata="{x:Reference __ReferenceID0}" SelectedFields="{x:Null}" Name="Incident (incident)">
+                  <ubme:BusinessEntity.EntityMetadata>
+                    <usm:ServiceNowEntityMetaData Description="{x:Null}" EligibleOperations="-1" IsCustomEntity="False" Name="Incident (incident)">
+                      <usm:ServiceNowEntityMetaData.AllAncestors>
+                        <x:String>task</x:String>
+                      </usm:ServiceNowEntityMetaData.AllAncestors>
+                      <usm:ServiceNowEntityMetaData.Metadata>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID0">
+                          <x:String x:Key="TableName">incident</x:String>
+                        </scg:Dictionary>
+                      </usm:ServiceNowEntityMetaData.Metadata>
+                    </usm:ServiceNowEntityMetaData>
+                  </ubme:BusinessEntity.EntityMetadata>
+                </ubme:BusinessEntity>
+              </usa:GetRecords.BusinessEntity>
+            </usa:GetRecords>
+            <ui:OutputDataTable DataTable="[getRecordsResult]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[resultsOutput]" />
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[resultsOutput]" />
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;So your given keyword(&quot; +TicketKeyword+ &quot;)ticket details present at this moment are :&quot;+Environment.NewLine+resultsOutput]" />
+          </Sequence>
+        </ActivityAction>
+      </usa:ServiceNowScopeActivity.Body>
+      <usa:ServiceNowScopeActivity.DesignConnectionRequest>
+        <ubmcao:BAFOAuthConnectionRequest ClientId="3c5123b55d9a1010d3cd4cf7267623ba" EncryptedClientSecret="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA2Ji8/MNojkagVw/YJtY9MgAAAAACAAAAAAADZgAAwAAAABAAAAD6YNYZe+gL3+w2vYmbcLGlAAAAAASAAACgAAAAEAAAAJKPWClVtu9ZyKTX/fqJYWIQAAAANhykWeS3erh/dhPHpJzYGxQAAACp0ctGnYlpkIR0UtnkXyPxSaRcEA==" ServerInstance="https://dev98331.service-now.com/" UserName="admin">
+          <ubmcao:BAFOAuthConnectionRequest.ClientSecret>
+            <ss:SecureString />
+          </ubmcao:BAFOAuthConnectionRequest.ClientSecret>
+          <ubmcao:BAFOAuthConnectionRequest.Password>
+            <ss:SecureString />
+          </ubmcao:BAFOAuthConnectionRequest.Password>
+        </ubmcao:BAFOAuthConnectionRequest>
+      </usa:ServiceNowScopeActivity.DesignConnectionRequest>
+      <usa:ServiceNowScopeActivity.ServiceFactory>
+        <uss:ServiceNowServiceFactory BusinessEntityExecuteService="{x:Null}">
+          <uss:ServiceNowServiceFactory.AttachmentService>
+            <uss2:AttachmentService />
+          </uss:ServiceNowServiceFactory.AttachmentService>
+          <uss:ServiceNowServiceFactory.BusinessEntityService>
+            <uss2:BusinessEntityService />
+          </uss:ServiceNowServiceFactory.BusinessEntityService>
+          <uss:ServiceNowServiceFactory.ConnectionService>
+            <uss1:ConnectionService />
+          </uss:ServiceNowServiceFactory.ConnectionService>
+          <uss:ServiceNowServiceFactory.MetadataService>
+            <uss2:MetadataService />
+          </uss:ServiceNowServiceFactory.MetadataService>
+          <uss:ServiceNowServiceFactory.QueryService>
+            <uss2:QueryService />
+          </uss:ServiceNowServiceFactory.QueryService>
+          <uss:ServiceNowServiceFactory.SampleDataService>
+            <uss2:SampleDataService />
+          </uss:ServiceNowServiceFactory.SampleDataService>
+        </uss:ServiceNowServiceFactory>
+      </usa:ServiceNowScopeActivity.ServiceFactory>
+    </usa:ServiceNowScopeActivity>
+  </Sequence>
+</Activity>
